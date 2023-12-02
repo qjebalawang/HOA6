@@ -19,3 +19,12 @@
       name: mariadb
       state: restarted
       enabled: true
+
+- hosts: file_servers
+  become: true
+  tasks:
+
+  - name: install samba package
+    package:
+      name: samba
+      state: latest
